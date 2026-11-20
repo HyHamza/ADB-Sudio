@@ -1,0 +1,24 @@
+[project]
+name = "adb-studio"
+version = "1.0.0"
+description = "Desktop ADB Control Center with instant screenshot capture and clipboard copy"
+requires-python = ">=3.11"
+dependencies = [
+    "PySide6>=6.6.0",
+    "pillow>=10.0.0",
+    "opencv-python>=4.8.0",
+    "numpy>=1.26.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "ruff>=0.4.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
